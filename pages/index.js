@@ -18,7 +18,7 @@ function Login() {
                 <input className = "form-control" type="text" id="email" name="email" />
                 
                 <label htmlFor="password">Password:</label>
-                <input className = "form-control" type="text" id="password" name="password" />
+                <input className = "form-control" type="password" id="password" name="password" />
 		<br />
                 <Link href="/faculty"><input type="submit" className = "btn btn-primary" value="Login"></input></Link>
             </form>
