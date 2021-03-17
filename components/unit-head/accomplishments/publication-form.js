@@ -9,14 +9,7 @@ class PublicationForm extends React.Component{
 		}
 	}
 	clone(){
-		this.state.duplicateForms.push(<div><hr /><div className = "form-row">
-			<div className = "col-auto">
-				<button type = "button" className = "btn btn-primary" id = "AddPublication" onClick = {() => this.clone()}> Add Publication </button>
-			</div>
-			<div className = "col-auto">
-				<button type = "button" className = "btn btn-danger" id = "RemovePublication" onClick = {() => this.remove()}> Remove a Row </button>
-			</div>
-		</div>
+		this.state.duplicateForms.push(<div><hr />
 		<br />
 		<div className = "form-row">
 			<div className = "form-group col-md-6">
