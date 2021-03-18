@@ -8,6 +8,7 @@ import Publication from '../../../components/unit-head/faculty-list/accomplishme
 import TrainingSeminar from '../../../components/unit-head/faculty-list/accomplishments/training-seminar'
 import LicensureExam from '../../../components/unit-head/faculty-list/accomplishments/licensure-exam'
 import ResearchGrant from '../../../components/unit-head/faculty-list/accomplishments/research-grant'
+import Evaluation from '../../../components/unit-head/faculty-list/evaluation/evaluation'
 
 function FacultyView() {
     return (
@@ -20,6 +21,7 @@ function FacultyView() {
             		<div className="nav nav-tabs nav-fill nav-justified" id="nav-tab-main" role="tablist">
 				<a className="nav-item nav-link active" id="basic-info-tab" data-toggle="tab" href="#basic-info" role="tab" aria-controls="basic-info" aria-selected="true">Basic Information</a>
 				<a className="nav-item nav-link" id="accomplishments-tab" data-toggle="tab" href="#accomplishments" role="tab" aria-controls="accomplishments" aria-selected="false">Accomplishments</a>
+				<a className="nav-item nav-link" id="evaluation-tab" data-toggle="tab" href="#evaluation" role="tab" aria-controls="evaluation" aria-selected="false">Peer Evaluation</a>
             		</div>
             	</nav>
 		<div className="tab-content" id="nav-tabContent-main">
@@ -54,6 +56,9 @@ function FacultyView() {
 	    				<div className="tab-pane fade" id="licensure-exam" role="tabpanel" aria-labelledby="licensure-exam-tab"><LicensureExam /></div>
 	    				<div className="tab-pane fade" id="research-grant" role="tabpanel" aria-labelledby="research-grant-tab"><ResearchGrant />></div>
             			</div>
+			</div>
+			<div className="tab-pane fade" id="evaluation" role="tabpanel" aria-labelledby="evaluation-tab">
+				<Evaluation />
 			</div>
             	</div>
 
