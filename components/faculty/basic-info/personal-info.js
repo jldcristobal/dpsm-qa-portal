@@ -100,6 +100,17 @@ function PersonalInfo(props) {
                         <input className = "form-control" type = "tel" name = "EmergencyContactNumber" pattern = "[0]{1}[9]{1}[0-9]{9}" defaultValue = { props.children.emergencyContactNumber } required />
                     </div>
                 </div>
+		<h5 align = "center"> Dependents </h5>
+		<div className = "form-row">
+		    <div className = "form-group col-md-4 required"> 
+			<label className = "control-label" htmlFor = "Dependent"> Name of Dependent </label>
+                        <input className = "form-control" type = "text" name = "Dependent" value = "Steve" required disabled />
+                    </div>
+                    <div className = "form-group col-md-4 required">
+                        <label className = "control-label" htmlFor = "DependentDateOfBirth"> Date of Birth </label>
+                        <input className = "form-control" type = "date" name = "DependentDateOfBirth" value = "1994-01-06" required disabled />
+                    </div>
+                </div>
 		<PersonalInfoDependents />
 		{/* <div className = "form-row">
 			<div className = "form-group col-md-3 required">
