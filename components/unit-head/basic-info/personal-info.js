@@ -110,6 +110,10 @@ function PersonalInfo() {
                         <label className = "control-label" htmlFor = "DependentDateOfBirth"> Date of Birth </label>
                         <input className = "form-control" type = "date" name = "DependentDateOfBirth" value = "1994-01-06" required disabled />
                     </div>
+		    <div className = "form-group col-md-4 required">
+                        <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
+                        <input className = "form-control" type = "text" name = "DependentRelationship[]" value = "Son" required disabled />
+                    </div>
                 </div>
 		<PersonalInfoDependents />
 		{/* <div className = "form-row">
