@@ -18,6 +18,10 @@ class PersonalInfoDependents extends React.Component{
                             <label htmlFor = "DependentDateOfBirth[]"> Date of Birth </label>
                             <input type = "date" className = "form-control" name = "DependentDateOfBirth[]" />
                         </div>
+			<div className = "form-group col-md-4">
+                            <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
+                            <input className = "form-control" type = "text" name = "DependentRelationship[]" />
+                    	</div>
                     </div>
 			<style jsx>{`
 			hr{
@@ -57,6 +61,10 @@ class PersonalInfoDependents extends React.Component{
                             <label htmlFor = "DependentDateOfBirth[]"> Date of Birth </label>
                             <input type = "date" className = "form-control" name = "DependentDateOfBirth[]" />
                         </div>
+			<div className = "form-group col-md-4">
+                            <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
+                            <input className = "form-control" type = "text" name = "DependentRelationship[]" />
+                    	</div>
                     </div>
                     <div id = "Dependents">
                         {this.state.duplicateForms}
