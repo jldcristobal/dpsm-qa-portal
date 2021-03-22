@@ -30,10 +30,21 @@ class PublicServiceAccomplishmentForm extends React.Component{
                             <input type = "file" className = "form-control-file" name = "PublicServiceAccomplishmentProof[]" />
                         </div>
                     </div>
+		    <div className = "form-row">
+			<div className = "form-group col-md-4">
+                            <label htmlFor = "PublicServiceAccomplishmentType[]"> Type of Contribution </label>
+                            <select className = "form-control" name = "PublicServiceAccomplishmentType" required>
+					<option>Within UPM</option>
+					<option>Contribution to Profession</option>
+					<option>Contribution to Nation</option>
+					<option>Contribution to the World</option>
+			    </select>
+                        </div>
 			<div className = "form-group col-md-6">
                             <label htmlFor = "PublicServiceAccomplishmentDescription[]"> Description </label>
                             <input className = "form-control" type = "text" name = "PublicServiceAccomplishmentDescription[]" placeholder = "Input description" />
                         </div>
+		    </div>
 			<style jsx>{`
 			hr{
 				border: 1px solid black;
@@ -85,10 +96,21 @@ class PublicServiceAccomplishmentForm extends React.Component{
                             <input type = "file" className = "form-control-file" name = "PublicServiceAccomplishmentProof[]" />
                         </div>
                     </div>
+		    <div className = "form-row">
+			<div className = "form-group col-md-4">
+                            <label htmlFor = "PublicServiceAccomplishmentType[]"> Type of Contribution </label>
+                            <select className = "form-control" name = "PublicServiceAccomplishmentType" required>
+					<option>Within UPM</option>
+					<option>Contribution to Profession</option>
+					<option>Contribution to Nation</option>
+					<option>Contribution to the World</option>
+			    </select>
+                        </div>
 			<div className = "form-group col-md-6">
                             <label htmlFor = "PublicServiceAccomplishmentDescription[]"> Description </label>
                             <input className = "form-control" type = "text" name = "PublicServiceAccomplishmentDescription[]" placeholder = "Input description" />
                         </div>
+		    </div>
                     <div id = "PublicServiceAccomplishment">
                         {this.state.duplicateForms}
                     </div>
