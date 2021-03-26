@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import PersonalInfoDependents from './personal-info-dependents'
+import NameDisplay from '../../../components/name-display'
 
 function PersonalInfo() {
     return (
         <div>
-	    	<h3 align = "center"> Personal Information: <u>Cena, John</u> </h3>
-		<br />
+	    	<h2 align = "center"> Personal Information </h2>
+		<NameDisplay />
 		<h6>Required</h6>
 		
             <form action="">
