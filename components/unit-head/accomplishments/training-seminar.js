@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import TrainingSeminarForm from './training-seminar-form'
+import NameDisplay from '../../../components/name-display'
 
 function TrainingSeminar() {
     return (
         <div>
-	    <h3 align = "center"> Trainings and Seminars: <u>Cena, John</u> </h3>
-		<br />
+	    <h2 align = "center"> Training/Seminars </h2>
+	    <NameDisplay />
             <div>
                 <table className = "table table-striped table-sm">
                     <tbody>
