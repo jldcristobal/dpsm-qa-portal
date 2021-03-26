@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import PublicationForm from './publication-form'
+import NameDisplay from '../../../components/name-display'
 
 function Publication(props){
     let content = Object.keys(props.children).map(key => {
@@ -25,8 +26,8 @@ function Publication(props){
     });
 	return(
 		<div>
-			<h3 align = "center"> Publications: <u>Cena, John</u> </h3>
-			<br />
+			<h2 align = "center"> Publications </h2>
+			<NameDisplay />
 			<div>
 	<table className = "table table-striped table-sm">
 		<tbody>
