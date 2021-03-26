@@ -56,6 +56,7 @@ function Education(props) {
                         <tr>
                             <th>Institution/School</th>
                             <th>Degree/Certification</th>
+	    		    <th>Degree Type</th>
                             <th>Major/Specialization</th>
                             <th>Start Date</th>
                             <th>End Date</th>
@@ -66,6 +67,7 @@ function Education(props) {
                         <tr>
                             <td>University of the Philippines Diliman</td>
                             <td>Doctor of Philosophy in Computer Science</td>
+	    		    <td>PhD</td>
                             <td>None</td>
                             <td>2020-01-26</td>
                             <td>Present</td>
@@ -81,6 +83,7 @@ function Education(props) {
                         <tr>
                             <td>University of the Philippines Diliman</td>
                             <td>MS Computer Science</td>
+	    		    <td>MS</td>
                             <td>Biostat</td>
                             <td>2017-05-26</td>
                             <td>2020-01-25</td>
@@ -96,6 +99,7 @@ function Education(props) {
                         <tr>
                             <td>University of the Philippines Los Banos</td>
                             <td>BS Computer Science</td>
+	    		    <td>BS</td>
                             <td>Health Informatics</td>
                             <td>2010-09-06</td>
                             <td>2017-05-25</td>
