@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import EducationForm from './education-form'
+import NameDisplay from '../../../components/name-display'
 
 function Education(props) {
     let content = Object.keys(props.children).map(key => {
@@ -47,8 +48,8 @@ function Education(props) {
     });
     return (
         <div>
-	    <h3 align = "center"> Educational History: <u>Cena, John</u> </h3>
-	    <br />
+	    <h2 align = "center"> Educational History </h2>
+	    <NameDisplay />
             <div>
                 <table className = "table table-striped table-sm">
                     <tbody>
