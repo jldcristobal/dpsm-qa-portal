@@ -1,13 +1,14 @@
 import Layout from '../../components/layout'
 import Link from 'next/link'
 import FacultyLoadSemester from '../../components/faculty/faculty-load/faculty-load-semester'
+import NameDisplay from '../../components/name-display'
 
 function FacultyLoad() {
     return (
         <Layout>
 		<br />
-		<h3 align = "center"> Faculty Load: <u>Cena, John</u> </h3>
-		<br />
+		<h2 align = "center"> Faculty Load </h2>
+		<NameDisplay />
             <div className="list-group">
 		<a className = "list-group-item list-group-item-action list-group-item-secondary" href = "#evaluation_ay20202021" data-toggle = "collapse" aria-controls = "evaluation_ay20202021">AY 2020-2021</a>
             	<div className="list-group collapse" id = "evaluation_ay20202021">
