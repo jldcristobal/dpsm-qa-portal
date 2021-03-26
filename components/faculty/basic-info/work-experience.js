@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import WorkExpForm from './work-exp-form'
 import EmploymentHistory from './employment-history'
+import NameDisplay from '../../../components/name-display'
 
 function WorkExperience(props){
 	const len = props.children.length - 1;
@@ -19,8 +20,8 @@ function WorkExperience(props){
 	});
 	return(
 		<div>
-			<h3 align = "center"> Work Experience: <u>Cena, John</u> </h3>
-			<br />
+			<h2 align = "center"> Work Experience </h2>
+			<NameDisplay />
 			<h5 align = "center"> Within UP Manila </h5>
 			<EmploymentHistory />
 			<br />
