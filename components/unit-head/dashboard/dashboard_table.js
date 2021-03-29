@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTable, useSortBy, useFilters, usePagination } from 'react-table'
+import { useTable, useGroupBy, useExpanded, useSortBy, useFilters, usePagination } from 'react-table'
 
 // default search box filter
 function DefaultColumnFilter({
@@ -65,6 +65,7 @@ function Table ({columns, data}){
      getTableProps,
      getTableBodyProps,
      headerGroups,
+     footerGroups,
      prepareRow,
      page,
      rows, 
@@ -77,12 +78,12 @@ function Table ({columns, data}){
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex, pageSize },
-   } = useTable({ columns, data, defaultColumn, initialState: { pageIndex: 0 } }, useFilters, useSortBy, usePagination)
+    state: { pageIndex, pageSize, groupBy, expanded },
+   } = useTable({ columns, data, defaultColumn, initialState: { pageIndex: 0 } }, useFilters, useGroupBy, useSortBy, useExpanded, usePagination)
 
  return(
 <div>
-   <table className = "table" {...getTableProps()}>
+   <table className = "table table-striped" {...getTableProps()}>
        <thead>
          {headerGroups.map(headerGroup => (
            <tr {...headerGroup.getHeaderGroupProps()}>
@@ -111,12 +112,64 @@ function Table ({columns, data}){
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map(cell => {
-                  return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  return (
+                    <td
+                      // For educational purposes, let's color the
+                      // cell depending on what type it is given
+                      // from the useGroupBy hook
+                      {...cell.getCellProps()}
+                      style={{
+                        background: cell.isGrouped
+                          ? '#0aff0082'
+                          : cell.isAggregated
+                          ? '#ffa50078'
+                          : cell.isPlaceholder
+                          ? '#ff000042'
+                          : 'white',
+                      }}
+                    >
+                      {cell.isGrouped ? (
+                        // If it's a grouped cell, add an expander and row count
+                        <>
+                          <span {...row.getToggleRowExpandedProps()}>
+                            {row.isExpanded ? '👇' : '👉'}
+                          </span>{' '}
+                          {cell.render('Cell')} ({row.subRows.length})
+                        </>
+                      ) : cell.isAggregated ? (
+                        // If the cell is aggregated, use the Aggregated
+                        // renderer for cell
+                        cell.render('Aggregated')
+                      ) : cell.isPlaceholder ? null : ( // For cells with repeated values, render null
+                        // Otherwise, just render the regular cell
+                        cell.render('Cell')
+                      )}
+                    </td>
+                  )
                 })}
               </tr>
             )
           })}
        </tbody>
+	<tfoot>
+        {footerGroups.map(group => (
+          <tr {...group.getFooterGroupProps()}>
+            {group.headers.map(column => (
+              <td 
+		{...column.getFooterProps()}>
+		{column.canGroupBy ? (
+                    // If the column can be grouped, let's add a toggle
+                    <span {...column.getGroupByToggleProps()}>
+                      {column.isGrouped ? 'Click to Ungroup ' : 'Click to Group'}
+                    </span>
+                  ) : null}
+		
+		{column.render('Footer')}
+	      </td>
+            ))}
+          </tr>
+        ))}
+      </tfoot>
      </table>
 
 	
@@ -230,12 +283,18 @@ function Table ({columns, data}){
      () => [
        {
          Header: 'Name',
+	 Footer: '',
          accessor: 'col1', // accessor is the "key" in the data,
+	 aggregate: 'count',
+         Aggregated: ({ value }) => `${value} Names`,
 	 Filter: DefaultColumnFilter
        },
        {
          Header: 'Degree',
+	 Footer: '',
          accessor: 'col2',
+	 aggregate: 'count',
+         Aggregated: ({ value }) => `${value} Names`,
 	 Filter: SelectColumnFilter
        },
      ],
