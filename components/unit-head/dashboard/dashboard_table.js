@@ -229,51 +229,63 @@ function Table ({columns, data}){
      () => [
        {
          col1: 'Cena, John',
-         col2: 'PhD',
+         col2: 'Attended Seminar',
+	 col3: 'Training/Seminars'
        },
        {
          col1: 'Stark, Anthony',
-         col2: 'MS',
+         col2: 'Published Journal',
+	 col3: 'Publications'
        },
        {
          col1: 'Nelson, Kent',
-         col2: 'BA',
+         col2: 'Published Book',
+	 col3: 'Publications'
        },
        {
          col1: 'Parker, Peter',
-         col2: 'PhD',
+         col2: 'Conducted Training',
+	 col3: 'Training/Seminars'
        },
        {
          col1: 'Omega, Kenny',
-         col2: 'BS',
+         col2: 'Government Project',
+	 col3: 'Public Service'
        },
        {
          col1: 'Wilson, Sam',
-         col2: 'MS',
+         col2: 'Medical Research',
+	 col3: 'Research Grants'
        },
        {
          col1: 'Naito, Tetsuya',
-         col2: 'BA',
+         col2: 'Global Initiative',
+	 col3: 'Public Service'
        },
        {
          col1: 'Sakurai, Masahiro',
-         col2: 'BS',
+         col2: 'Charity Work',
+	 col3: 'Public Service'
        },
        {
          col1: 'Reyes, Jaime',
-         col2: 'BS',
+         col2: 'CERN Research',
+	 col3: 'Research Grants'
        },
        {
          col1: 'Steve',
-         col2: 'MS',
+         col2: 'Spoke at Seminar',
+	 col3: 'Training/Seminars'
        },
        {
          col1: 'Hedgehog, Sonic the',
-         col2: 'PhD',
+         col2: 'Published Dissertation',
+	 col3: 'Publications'
        },
        {
          col1: 'Odinsdottir, Angela',
-         col2: 'BA',
+         col2: 'Published Thesis',
+	 col3: 'Publications'
        }
      ],
      []
@@ -290,13 +302,21 @@ function Table ({columns, data}){
 	 Filter: DefaultColumnFilter
        },
        {
-         Header: 'Degree',
+         Header: 'Accomplishment',
 	 Footer: '',
          accessor: 'col2',
 	 aggregate: 'count',
-         Aggregated: ({ value }) => `${value} Names`,
-	 Filter: SelectColumnFilter
+         Aggregated: ({ value }) => `${value} Accomplishments`,
+	 Filter: DefaultColumnFilter
        },
+       {
+         Header: 'Accomplishment Type',
+	 Footer: '',
+         accessor: 'col3',
+	 aggregate: 'count',
+         Aggregated: ({ value }) => `${value} Entries`,
+	 Filter: SelectColumnFilter
+       }
      ],
      []
    )
