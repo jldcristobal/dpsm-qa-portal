@@ -6,7 +6,7 @@ function Sidebar() {
                 <div className="list-group">
 			<a className = "list-group-item list-group-item-action list-group-item-secondary" data-toggle = "collapse" href = "#facultyMenu" aria-controls = "facultyMenu"> Faculty </a>
 			<div id = "facultyMenu" className = "collapse show">
-                    <Link href="/faculty"><a className = "list-group-item list-group-item-action list-group-item-success">Dashboard</a></Link>
+                    {/*<Link href="/faculty"><a className = "list-group-item list-group-item-action list-group-item-success">Dashboard</a></Link>*/}
                     <Link href="/faculty/basic-info"><a className = "list-group-item list-group-item-action list-group-item-success">Basic Information</a></Link>
                     <Link href="/faculty/accomplishment"><a className = "list-group-item list-group-item-action list-group-item-success">Accomplishment</a></Link>
                     <Link href="/faculty/faculty-load"><a className = "list-group-item list-group-item-action list-group-item-success">Faculty Load</a></Link>
