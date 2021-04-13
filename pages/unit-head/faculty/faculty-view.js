@@ -9,6 +9,7 @@ import TrainingSeminar from '../../../components/unit-head/faculty-list/accompli
 import LicensureExam from '../../../components/unit-head/faculty-list/accomplishments/licensure-exam'
 import ResearchGrant from '../../../components/unit-head/faculty-list/accomplishments/research-grant'
 import Evaluation from '../../../components/unit-head/faculty-list/evaluation/evaluation'
+import FacultySET from '../../../components/unit-head/faculty-list/SET/SET'
 
 function FacultyView() {
     return (
@@ -22,6 +23,7 @@ function FacultyView() {
 				<a className="nav-item nav-link active" id="basic-info-tab" data-toggle="tab" href="#basic-info" role="tab" aria-controls="basic-info" aria-selected="true">Basic Information</a>
 				<a className="nav-item nav-link" id="accomplishments-tab" data-toggle="tab" href="#accomplishments" role="tab" aria-controls="accomplishments" aria-selected="false">Accomplishments</a>
 				<a className="nav-item nav-link" id="evaluation-tab" data-toggle="tab" href="#evaluation" role="tab" aria-controls="evaluation" aria-selected="false">Peer Evaluation</a>
+				<a className="nav-item nav-link" id="SET-tab" data-toggle="tab" href="#SET" role="tab" aria-controls="SET" aria-selected="false">SET</a>
             		</div>
             	</nav>
 		<div className="tab-content" id="nav-tabContent-main">
@@ -59,6 +61,9 @@ function FacultyView() {
 			</div>
 			<div className="tab-pane fade" id="evaluation" role="tabpanel" aria-labelledby="evaluation-tab">
 				<Evaluation />
+			</div>
+			<div className="tab-pane fade" id="SET" role="tabpanel" aria-labelledby="SET-tab">
+				<FacultySET />
 			</div>
             	</div>
 
