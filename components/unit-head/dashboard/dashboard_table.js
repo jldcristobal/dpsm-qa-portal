@@ -230,62 +230,74 @@ function Table ({columns, data}){
        {
          col1: 'Cena, John',
          col2: 'Attended Seminar',
-	 col3: 'Training/Seminars'
+	 col3: 'Training/Seminars',
+	 col4: '2021-01-01'
        },
        {
          col1: 'Stark, Anthony',
          col2: 'Published Journal',
-	 col3: 'Publications'
+	 col3: 'Publications',
+	 col4: '2020-04-01'
        },
        {
          col1: 'Nelson, Kent',
          col2: 'Published Book',
-	 col3: 'Publications'
+	 col3: 'Publications',
+	 col4: '2021-03-02'
        },
        {
          col1: 'Parker, Peter',
          col2: 'Conducted Training',
-	 col3: 'Training/Seminars'
+	 col3: 'Training/Seminars',
+	 col4: '2021-01-26'
        },
        {
          col1: 'Omega, Kenny',
          col2: 'Government Project',
-	 col3: 'Public Service'
+	 col3: 'Public Service',
+	 col4: '2021-05-06'
        },
        {
          col1: 'Wilson, Sam',
          col2: 'Medical Research',
-	 col3: 'Research Grants'
+	 col3: 'Research Grants',
+	 col4: '2021-12-11'
        },
        {
          col1: 'Naito, Tetsuya',
          col2: 'Global Initiative',
-	 col3: 'Public Service'
+	 col3: 'Public Service',
+	 col4: '2020-01-02'
        },
        {
          col1: 'Sakurai, Masahiro',
          col2: 'Charity Work',
-	 col3: 'Public Service'
+	 col3: 'Public Service',
+	 col4: '2021-03-07'
        },
        {
          col1: 'Reyes, Jaime',
          col2: 'CERN Research',
-	 col3: 'Research Grants'
+	 col3: 'Research Grants',
+	 col4: '2021-04-15'
        },
        {
          col1: 'Steve',
          col2: 'Spoke at Seminar',
-	 col3: 'Training/Seminars'
+	 col3: 'Training/Seminars',
+	 col4: '2021-06-13'
        },
        {
          col1: 'Hedgehog, Sonic the',
          col2: 'Published Dissertation',
-	 col3: 'Publications'
+	 col3: 'Publications',
+	 col4: '2011-07-23'
        },
        {
          col1: 'Odinsdottir, Angela',
          col2: 'Published Thesis',
-	 col3: 'Publications'
+	 col3: 'Publications',
+	 col4: '2021-01-17'
        }
      ],
      []
@@ -316,6 +328,15 @@ function Table ({columns, data}){
 	 aggregate: 'count',
          Aggregated: ({ value }) => `${value} Entries`,
 	 Filter: SelectColumnFilter
+       },
+       {
+         Header: 'Start Date',
+	 Footer: '',
+         accessor: 'col4',
+	 sortBy: 'datetime',
+	 aggregate: 'count',
+         Aggregated: ({ value }) => `${value} Entries`,
+	 Filter: DefaultColumnFilter
        }
      ],
      []
