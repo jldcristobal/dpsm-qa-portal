@@ -11,7 +11,7 @@ function ResearchGrant(){
 	<table className = "table table-striped table-sm">
 		<tbody>
 			<tr>
-				<th>Research Name</th>
+				<th>Research Project</th>
 				<th>Researcher/s</th>
 				<th>Sponsor</th>
 				<th>Amount</th>
@@ -98,7 +98,7 @@ function ResearchGrant(){
                             <hr />
                             <div className = "form-row">
                         	<div className = "form-group">
-					<label htmlFor = "ResearchUpdate"> Research Name </label>
+					<label htmlFor = "ResearchUpdate"> Research Project </label>
 					<input className = "form-control" type = "text" name = "ResearchUpdate" placeholder = "Input research name" />
 				</div>
                     	    </div>
