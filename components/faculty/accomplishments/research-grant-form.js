@@ -11,7 +11,7 @@ class ResearchGrantForm extends React.Component{
 	clone(){
 		this.state.duplicateForms.push(<div><hr /><div className = "form-row">
 			<div className = "form-group col-md-2">
-				<label htmlFor = "Research[]"> Research Name </label>
+				<label htmlFor = "Research[]"> Research Project </label>
 				<input className = "form-control" type = "text" name = "Research[]" placeholder = "Input research name" />
 			</div>
 			<div className = "form-group col-md-2"> 
@@ -91,7 +91,7 @@ class ResearchGrantForm extends React.Component{
 		<br />
 		<div className = "form-row">
 			<div className = "form-group col-md-2">
-				<label htmlFor = "Research[]"> Research Name </label>
+				<label htmlFor = "Research[]"> Research Project </label>
 				<input className = "form-control" type = "text" name = "Research[]" placeholder = "Input research name" />
 			</div>
 			<div className = "form-group col-md-2"> 
