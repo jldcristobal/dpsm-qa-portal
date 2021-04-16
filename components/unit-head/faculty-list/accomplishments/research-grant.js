@@ -7,7 +7,7 @@ function ResearchGrant(){
 	<table className = "table table-striped table-sm">
 		<tbody>
 			<tr>
-				<th>Research Name</th>
+				<th>Research Project</th>
 				<th>Reseacher/s</th>
 				<th>Sponsor</th>
 				<th>Amount</th>
