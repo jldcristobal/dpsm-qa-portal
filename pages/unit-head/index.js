@@ -1,5 +1,6 @@
 import LayoutUnitHead from '../../components/layout-unit-head'
 import AccomplishmentCount from '../../components/unit-head/dashboard/accomplishment-count/accomplishment-count'
+import EmploymentStatus from '../../components/unit-head/dashboard/employment-status/employment-status'
 
 function Dashboard() {
     return (
@@ -14,7 +15,7 @@ function Dashboard() {
             		</nav>
 	    		<div className="tab-content" id="nav-tabContent">
 	    			<div className="tab-pane fade show active" id="accomplishment-count" role="tabpanel" aria-labelledby="accomplishment-count-tab"><AccomplishmentCount /></div>
-				<div className="tab-pane fade" id="employment-status" role="tabpanel" aria-labelledby="employment-status-tab">sup</div>
+				<div className="tab-pane fade" id="employment-status" role="tabpanel" aria-labelledby="employment-status-tab"><EmploymentStatus /></div>
 	    			<div className="tab-pane fade" id="SET-score" role="tabpanel" aria-labelledby="SET-score-tab">sup</div>
             		</div>
                 
