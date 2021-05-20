@@ -6,6 +6,15 @@ function AccomplishmentCount(){
 		<div>
 			<br />
 			<h3 align = "center">Accomplishment Count</h3>
+			<div className = "form-group col-md-4 required">
+					<label className = "control-label" htmlFor ="DeptUnit"> Department Unit </label>
+                    			<select className = "form-control" name = "DeptUnit" required>
+						<option>All</option>
+						<option>Mathematics and Computing Sciences Unit</option>
+						<option>Chemistry Unit</option>
+						<option>Physics and Geology Unit</option>
+					</select>
+                	</div>
 			<div className = "form-row">
                     		<div className = "form-group col-md-4 required">
 					<label className = "control-label" htmlFor ="StartTimePeriod"> From  </label>
