@@ -229,76 +229,88 @@ function Table ({columns, data}){
    const data = React.useMemo(
      () => [
        {
-         col1: 'Cena, John',
+         col1: <a href = "">Cena, John</a>,
          col2: 'Attended Seminar',
 	 col3: 'Training/Seminars',
-	 col4: '2021-01-01'
+	 col4: '2021-01-01',
+	 col5: '2021-01-20'
        },
        {
-         col1: 'Stark, Anthony',
+         col1: <a href = "">Stark, Anthony</a>,
          col2: 'Published Journal',
 	 col3: 'Publications',
-	 col4: '2020-04-01'
+	 col4: '2020-04-01',
+	 col5: '2021-06-01'
        },
        {
-         col1: 'Nelson, Kent',
+         col1: <a href = "">Nelson, Kent</a>,
          col2: 'Published Book',
 	 col3: 'Publications',
-	 col4: '2021-03-02'
+	 col4: '2021-03-02',
+	 col5: '2021-04-01'
        },
        {
-         col1: 'Parker, Peter',
+         col1: <a href = "">Parker, Peter</a>,
          col2: 'Conducted Training',
 	 col3: 'Training/Seminars',
-	 col4: '2021-01-26'
+	 col4: '2021-01-26',
+	 col5: '2021-02-01'
        },
        {
-         col1: 'Omega, Kenny',
+         col1: <a href = "">Omega, Kenny</a>,
          col2: 'Government Project',
 	 col3: 'Public Service',
-	 col4: '2021-05-06'
+	 col4: '2021-05-06',
+	 col5: '2021-07-01'
        },
        {
-         col1: 'Wilson, Sam',
+         col1: <a href = "">Wilson, Sam</a>,
          col2: 'Medical Research',
 	 col3: 'Research Grants',
-	 col4: '2021-12-11'
+	 col4: '2021-12-11',
+	 col5: '2022-01-01'
        },
        {
-         col1: 'Naito, Tetsuya',
+         col1: <a href = "">Naito, Tetsuya</a>,
          col2: 'Global Initiative',
 	 col3: 'Public Service',
-	 col4: '2020-01-02'
+	 col4: '2020-01-02',
+	 col5: '2020-01-10'
        },
        {
-         col1: 'Sakurai, Masahiro',
+         col1: <a href = "">Sakurai, Masahiro</a>,
          col2: 'Charity Work',
 	 col3: 'Public Service',
-	 col4: '2021-03-07'
+	 col4: '2021-03-07',
+	 col5: '2021-04-01'
        },
        {
-         col1: 'Reyes, Jaime',
+         col1: <a href = "">Reyes, Jaime</a>,
          col2: 'CERN Research',
 	 col3: 'Research Grants',
-	 col4: '2021-04-15'
+	 col4: '2021-04-15',
+	 col5: '2021-04-21'
        },
        {
-         col1: 'Steve',
+         col1: <a href = "">Steve</a>,
          col2: 'Spoke at Seminar',
 	 col3: 'Training/Seminars',
-	 col4: '2021-06-13'
+	 col4: '2021-06-13',
+	 col5: '2021-06-15'
        },
        {
-         col1: 'Hedgehog, Sonic the',
+         col1: <a href = "">Hedgehog, Sonic the</a>,
          col2: 'Published Dissertation',
 	 col3: 'Publications',
-	 col4: '2011-07-23'
+	 col4: '2011-07-23',
+	 col5: '2011-08-01'
        },
        {
-         col1: 'Odinsdottir, Angela',
+         col1: <a href = "">Odinsdottir, Angela</a>,
          col2: 'Published Thesis',
 	 col3: 'Publications',
-	 col4: '2021-01-17'
+	 col4: '2021-01-17',
+	 col5: '2021-01-20'
        }
      ],
      []
@@ -334,6 +346,15 @@ function Table ({columns, data}){
          Header: 'Start Date',
 	 Footer: '',
          accessor: 'col4',
+	 sortBy: 'datetime',
+	 aggregate: 'count',
+         Aggregated: ({ value }) => `${value} Entries`,
+	 Filter: DefaultColumnFilter
+       },
+       {
+         Header: 'End Date',
+	 Footer: '',
+         accessor: 'col5',
 	 sortBy: 'datetime',
 	 aggregate: 'count',
          Aggregated: ({ value }) => `${value} Entries`,
