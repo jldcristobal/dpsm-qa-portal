@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import LayoutUnitHead from '../../../components/layout-unit-head'
+import NameDisplay from '../../../components/name-display'
 import PersonalInfo from '../../../components/unit-head/faculty-list/basic-info/personal-info'
 import Education from '../../../components/unit-head/faculty-list/basic-info/education'
 import WorkExperience from '../../../components/unit-head/faculty-list/basic-info/work-experience'
@@ -17,7 +18,8 @@ function FacultyView() {
 		<br />
 		<Link href = "/unit-head/faculty/all"><a href = "#">Back</a></Link>
 		<br />
-            	<h4 align = "center"> View Profile: <u>Baes, Gregorio</u> </h4>
+            	<h4 align = "center"> View Profile: </h4>
+		<NameDisplay />
 		<nav>
             		<div className="nav nav-tabs nav-fill nav-justified" id="nav-tab-main" role="tablist">
 				<a className="nav-item nav-link active" id="basic-info-tab" data-toggle="tab" href="#basic-info" role="tab" aria-controls="basic-info" aria-selected="true">Basic Information</a>
