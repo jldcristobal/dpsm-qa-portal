@@ -11,6 +11,7 @@ function Sidebar() {
                     <Link href="/faculty/accomplishment"><a className = "list-group-item list-group-item-action list-group-item-success">Accomplishment</a></Link>
                     <Link href="/faculty/faculty-load"><a className = "list-group-item list-group-item-action list-group-item-success">Faculty Load</a></Link>
                     <Link href="/faculty/evaluation"><a className = "list-group-item list-group-item-action list-group-item-success ">Peer Evaluation</a></Link>
+		    <Link href="/faculty/add-update-faculty"><a className = "list-group-item list-group-item-action list-group-item-success">Add/Update Faculty</a></Link>
 			</div>
                 </div>
                 <div className="list-group">
