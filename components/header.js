@@ -20,7 +20,7 @@ function Header() {
 				<p align = "center"> Currently Logged In: </p>
 			</div>
 			<div className = "card-block">
-				<Link href = "/faculty/basic-info"><p align = "center"><a> Cena, John </a></p></Link>
+				<Link href = "/change-password"><p align = "center"><a> Cena, John </a></p></Link>
 			</div>
 		</div>
             </nav>
