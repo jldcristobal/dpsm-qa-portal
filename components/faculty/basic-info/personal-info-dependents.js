@@ -20,7 +20,7 @@ class PersonalInfoDependents extends React.Component{
                         </div>
 			<div className = "form-group col-md-4 required">
                             <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
-                            <input className = "form-control" type = "text" name = "DependentRelationship[]" />
+                            <input className = "form-control" type = "text" name = "DependentRelationship[]" value = "Son" required disabled />
                     	</div>
                     </div>
 			<style jsx>{`
@@ -61,7 +61,7 @@ class PersonalInfoDependents extends React.Component{
                             <label htmlFor = "DependentDateOfBirth[]"> Date of Birth </label>
                             <input type = "date" className = "form-control" name = "DependentDateOfBirth[]" />
                         </div>
-			<div className = "form-group col-md-4 required">
+			<div className = "form-group col-md-4">
                             <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
                             <input className = "form-control" type = "text" name = "DependentRelationship[]" />
                     	</div>

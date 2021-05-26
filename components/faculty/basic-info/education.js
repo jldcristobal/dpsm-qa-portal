@@ -2,61 +2,18 @@ import Link from 'next/link'
 import EducationForm from './education-form'
 import NameDisplay from '../../../components/name-display'
 
-function Education(props) {
-    let content = Object.keys(props.children).map(key => {
-        if(props.children[key].status == 'ongoing') {
-            return (
-                <tr key = {props.children.[key].educInfoId}>
-                    <td>{props.children[key].institutionSchool}</td>
-                    <td>{props.children[key].degreeCert}</td>
-                    <td>{props.children[key].majorSpecialization}</td>
-                    <td>{props.children[key].startDate}</td>
-                    <td>{props.children[key].endDate}</td>
-                    <td><button>Preview proof here (img/pdf)</button></td>
-                    <td>
-                        <a 
-                            className="btn btn-info"
-                            data-toggle="modal"
-                            data-target="#ongoing"
-                        >
-                            {props.children[key].status}
-                        </a>
-                    </td>
-                </tr>
-            );
-        } else if(props.children[key].status == 'for verification') {
-            return (
-                <tr>
-                    <td>{props.children[key].institutionSchool}</td>
-                    <td>{props.children[key].degreeCert}</td>
-                    <td>{props.children[key].majorSpecialization}</td>
-                    <td>{props.children[key].startDate}</td>
-                    <td>{props.children[key].endDate}</td>
-                    <td><button>Preview proof here (img/pdf)</button></td>
-                    <td>
-                        <a 
-                            className="btn btn-info"
-                            data-toggle="modal"
-                            data-target="#forVerif"
-                        >
-                            {props.children[key].status}
-                        </a>
-                    </td>
-                </tr>
-            );
-        }
-    });
+function Education() {
     return (
         <div>
-	    <h2 align = "center"> Educational History </h2>
-	    <NameDisplay />
+		<h2 align = "center"> Educational History </h2>
+		<NameDisplay />
             <div>
                 <table className = "table table-striped table-sm">
                     <tbody>
                         <tr>
                             <th>Institution/School</th>
                             <th>Degree/Certification</th>
-	    		    <th>Degree Type</th>
+			    <th>Degree Type</th>
                             <th>Major/Specialization</th>
                             <th>Start Date</th>
                             <th>End Date</th>
@@ -67,11 +24,16 @@ function Education(props) {
                         <tr>
                             <td>University of the Philippines Diliman</td>
                             <td>Doctor of Philosophy in Computer Science</td>
-	    		    <td>PhD</td>
+			    <td>PhD</td>
                             <td>None</td>
                             <td>2020-01-26</td>
                             <td>Present</td>
-                            <td><a href = "#">Download proof</a></td>
+                            <td>
+				<div className = "btn-group">
+					<a className="btn btn-success">View</a>
+					<a className="btn btn-primary">Download</a>
+				</div>
+			    </td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -83,11 +45,16 @@ function Education(props) {
                         <tr>
                             <td>University of the Philippines Diliman</td>
                             <td>MS Computer Science</td>
-	    		    <td>MS</td>
+			    <td>MS</td>
                             <td>Biostat</td>
                             <td>2017-05-26</td>
                             <td>2020-01-25</td>
-                            <td><a href = "#">Download proof</a></td>
+                            <td>
+				<div className = "btn-group">
+					<a className="btn btn-success">View</a>
+					<a className="btn btn-primary">Download</a>
+				</div>
+			    </td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -99,11 +66,16 @@ function Education(props) {
                         <tr>
                             <td>University of the Philippines Los Banos</td>
                             <td>BS Computer Science</td>
-	    		    <td>BS</td>
+			    <td>BS</td>
                             <td>Health Informatics</td>
                             <td>2010-09-06</td>
                             <td>2017-05-25</td>
-                            <td><a href = "#">Download proof</a></td>
+                            <td>
+				<div className = "btn-group">
+					<a className="btn btn-success">View</a>
+					<a className="btn btn-primary">Download</a>
+				</div>
+			    </td>
 			    <td>Verified</td>
                             <td>
 				<div className = "btn-group">

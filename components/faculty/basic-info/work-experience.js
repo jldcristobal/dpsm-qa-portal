@@ -3,25 +3,11 @@ import WorkExpForm from './work-exp-form'
 import EmploymentHistory from './employment-history'
 import NameDisplay from '../../../components/name-display'
 
-function WorkExperience(props){
-	const len = props.children.length - 1;
-	let content = Object.keys(props.children).map(key => {
-		if(key != len) {
-			return (
-				<tr>
-					<td>{props.children[key].employerName}</td>
-					<td>{props.children[key].position}</td>
-					<td>{props.children[key].startDate}</td>
-					<td>{props.children[key].endDate}</td>
-					<td>{props.children[key].description}</td>
-				</tr>
-			);	
-		}
-	});
+function WorkExperience(){
 	return(
-		<div>
-			<h2 align = "center"> Work Experience </h2>
-			<NameDisplay />
+	<div>
+		<h2 align = "center"> Work Experience </h2>
+		<NameDisplay />
 			<h5 align = "center"> Within UP Manila </h5>
 			<EmploymentHistory />
 			<br />
@@ -85,10 +71,11 @@ function WorkExperience(props){
 				</tr>
 			</tbody>
 		</table>
-			<div>
-				<WorkExpForm />
-			</div>
-		<div className="modal fade" id="editWorkExperience" tabIndex="-1" role="dialog" aria-labelledby="editWorkExperienceLabel" aria-hidden="true">
+<div>
+	<WorkExpForm />
+</div>
+
+<div className="modal fade" id="editWorkExperience" tabIndex="-1" role="dialog" aria-labelledby="editWorkExperienceLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                     <div className="modal-header">
@@ -166,8 +153,8 @@ function WorkExperience(props){
                     </div>
                 </div>
             </div>
-		
-		</div>
+
+</div>
 	)
 }
 

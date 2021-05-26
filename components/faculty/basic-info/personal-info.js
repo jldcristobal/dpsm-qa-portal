@@ -2,10 +2,10 @@ import Link from 'next/link'
 import PersonalInfoDependents from './personal-info-dependents'
 import NameDisplay from '../../../components/name-display'
 
-function PersonalInfo(props) {
+function PersonalInfo() {
     return (
         <div>
-	    	<h2 align = "center"> Personal Information </h2>
+		<h2 align = "center"> Personal Information </h2>
 		<NameDisplay />
 		<h6>Required</h6>
 		
@@ -14,15 +14,15 @@ function PersonalInfo(props) {
                 <div className = "form-row">
                     <div className = "form-group col-md-3 required">
                         <label className = "control-label" htmlFor = "FirstName"> First Name </label>
-                        <input className = "form-control" type = "text" name = "FirstName" defaultValue = { props.children.firstName } required />
+                        <input className = "form-control" type = "text" name = "FirstName" value = "Jodie Lee Diane" required />
                     </div>
                     <div className = "form-group col-md-3">
                         <label htmlFor = "MiddleName"> Middle Name </label>
-                        <input className = "form-control" type = "text" name = "MiddleName" defaultValue = { props.children.middleName } required />
+                        <input className = "form-control" type = "text" name = "MiddleName" value = "Pacay"/>
                     </div>
                     <div className = "form-group col-md-3 required">
                         <label className = "control-label" htmlFor = "LastName"> Last Name </label>
-                        <input className = "form-control" type = "text" name = "LastName" defaultValue = { props.children.lastName } required />
+                        <input className = "form-control" type = "text" name = "LastName" value = "Cristobal" required />
                     </div>
 		    <div className = "form-group col-md-3">
                         <label htmlFor = "Suffix"> Suffix </label>
@@ -32,33 +32,33 @@ function PersonalInfo(props) {
                 <div className = "form-row">
                     <div className = "form-group col-md-4 required">
 				<label className = "control-label" htmlFor ="Sex"> Sex </label>
-                    		<select className = "form-control" name = "Sex" defaultValue = { props.children.gender } required>
+                    		<select className = "form-control" name = "Sex" required>
 					<option>Male</option>
 					<option>Female</option>
 				</select>
                 	</div>
                     <div className = "form-group col-md-4 required">
                         <label className = "control-label" htmlFor = "DateOfBirth"> Date of Birth </label>
-                        <input className = "form-control" type = "date" name = "DateOfBirth" defaultValue = { props.children.dateOfBirth } required />
+                        <input className = "form-control" type = "date" name = "DateOfBirth" value = "1994-01-06" required />
                     </div>
                     <div className = "form-group col-md-4 required">
                         <label className = "control-label" htmlFor = "PlaceOfBirth"> Place of Birth </label>
-                        <input className = "form-control" type = "text" name = "PlaceOfBirth" defaultValue = { props.children.placeOfBirth } required />
+                        <input className = "form-control" type = "text" name = "PlaceOfBirth" value = "Cristobal" required />
                     </div>
                 </div>
                 <br />
                 <div className = "form-group required">
                     <label className = "control-label" htmlFor = "PresentAddress"> Present Address </label>
-                    <input className = "form-control" type = "text" name = "PresentAddress" defaultValue = { props.children.presentAddress } required />
+                    <input className = "form-control" type = "text" name = "PresentAddress" required />
                 </div>
                 <div className = "form-group required">
                     <label className = "control-label" htmlFor = "PermanentAddress"> Permanent Address </label>
-                    <input className = "form-control" type = "text" name = "PermanentAddress" defaultValue = { props.children.permanentAddress } required />
+                    <input className = "form-control" type = "text" name = "PermanentAddress" required />
                 </div>
 		<div className = "form-row">
                 	<div className = "form-group col-md-6 required">
 				<label className = "control-label" htmlFor ="CivilStatus"> Civil Status </label>
-                    		<select className = "form-control" name = "CivilStatus" defaultValue = { props.children.civilStatus } required>
+                    		<select className = "form-control" name = "CivilStatus" required>
 					<option>Single</option>
 					<option>Married</option>
 					<option>Separated (Legally)</option>
@@ -68,23 +68,23 @@ function PersonalInfo(props) {
                 	</div>
                		<div className = "form-group col-md-6">
                     		<label htmlFor = "Religion"> Religion </label>
-                    		<input className = "form-control" type = "text" name = "Religion" defaultValue = { props.children.religion } required />
+                    		<input className = "form-control" type = "text" name = "Religion" />
                 	</div>
 		</div>
                 <div className = "form-row">
                     <div className = "form-group col-md-6 required">
                         <label className = "control-label" htmlFor = "ContactNumber"> Contact Number (Landline) </label>
-                        <input className = "form-control" type = "tel" name = "ContactNumberLandline" pattern = "[0-9]{8}" defaultValue = { props.children.landline } required />
+                        <input className = "form-control" type = "tel" name = "ContactNumberLandline" pattern = "[0-9]{8}" required />
                     </div>
 		    <div className = "form-group col-md-6 required">
                         <label className = "control-label" htmlFor = "ContactNumber"> Contact Number (Mobile) </label>
-                        <input className = "form-control" type = "tel" name = "ContactNumberMobile" pattern = "[0]{1}[9]{1}[0-9]{9}" defaultValue = { props.children.mobile } required />
+                        <input className = "form-control" type = "tel" name = "ContactNumberMobile" pattern = "[0]{1}[9]{1}[0-9]{9}" required />
                     </div>
                 </div>
 		<div className = "form-row">
 		    <div className = "form-group col-md-6 required">
                         <label className = "control-label" htmlFor = "EmailAddressUP"> Email Address (UP Mail) </label>
-                        <input className = "form-control" type = "email" name = "EmailAddressUP" defaultValue = { props.children.email } disabled required />
+                        <input className = "form-control" type = "email" name = "EmailAddressUP" disabled required />
                     </div>
 		    <div className = "form-group col-md-6">
                         <label className = "control-label" htmlFor = "EmailAddressAlt"> Email Address (alternate) </label>
@@ -94,26 +94,27 @@ function PersonalInfo(props) {
                 <div className = "form-row">
                     <div className = "form-group col-md-6 required">
                         <label className = "control-label" htmlFor = "EmergencyContact"> Emergency Contact </label>
-                        <input className = "form-control" type = "text" name = "EmergencyContact" defaultValue = { props.children.emergencyContactPerson } required />
+                        <input className = "form-control" type = "text" name = "EmergencyContact" required />
                     </div>
                     <div className = "form-group col-md-6 required">
                         <label className = "control-label" htmlFor = "EmergencyContactNumber"> Emergency Contact Number </label>
-                        <input className = "form-control" type = "tel" name = "EmergencyContactNumber" pattern = "[0]{1}[9]{1}[0-9]{9}" defaultValue = { props.children.emergencyContactNumber } required />
+                        <input className = "form-control" type = "tel" name = "EmergencyContactNumber" pattern = "[0]{1}[9]{1}[0-9]{9}" required />
                     </div>
                 </div>
+		
 		<h5 align = "center"> Dependents </h5>
 		<div className = "form-row">
 		    <div className = "form-group col-md-4 required"> 
-			<label className = "control-label" htmlFor = "Dependent"> Name of Dependent </label>
-                        <input className = "form-control" type = "text" name = "Dependent" value = "Steve" required disabled />
+			<label className = "control-label" htmlFor = "Dependent[]"> Name of Dependent </label>
+                        <input className = "form-control" type = "text" name = "Dependent[]" value = "Steve" required disabled />
                     </div>
                     <div className = "form-group col-md-4 required">
-                        <label className = "control-label" htmlFor = "DependentDateOfBirth"> Date of Birth </label>
-                        <input className = "form-control" type = "date" name = "DependentDateOfBirth" value = "1994-01-06" required disabled />
+                        <label className = "control-label" htmlFor = "DependentDateOfBirth[]"> Date of Birth </label>
+                        <input className = "form-control" type = "date" name = "DependentDateOfBirth[]" value = "1994-01-06" required disabled />
                     </div>
 		    <div className = "form-group col-md-4 required">
-                            <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
-                            <input className = "form-control" type = "text" name = "DependentRelationship[]" value = "Son" required disabled />
+                        <label className = "control-label" htmlFor = "DependentRelationship[]"> Relationship to User </label>
+                        <input className = "form-control" type = "text" name = "DependentRelationship[]" value = "Son" required disabled />
                     </div>
                 </div>
 		<PersonalInfoDependents />
