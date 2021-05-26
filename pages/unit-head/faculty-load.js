@@ -1,13 +1,13 @@
-import Layout from '../../components/layout'
+import LayoutUnitHead from '../../components/layout-unit-head'
 import Link from 'next/link'
-import FacultyLoadSemester from '../../components/faculty/faculty-load/faculty-load-semester'
+import FacultyLoadSemester from '../../components/unit-head/faculty-load/faculty-load-semester'
 import NameDisplay from '../../components/name-display'
 
 function FacultyLoad() {
     return (
-        <Layout>
+        <LayoutUnitHead>
 		<br />
-		<h2 align = "center"> Faculty Load </h2>
+			<h2 align = "center"> Faculty Load </h2>
 			<NameDisplay />
 		<br />
             <div className="list-group">
@@ -36,7 +36,7 @@ function FacultyLoad() {
 				text-indent:5%;
 			}
 	    `}</style>
-        </Layout>
+        </LayoutUnitHead>
     )
   }
   

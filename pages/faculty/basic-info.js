@@ -1,11 +1,10 @@
-import Fetch from 'isomorphic-unfetch'
 import Layout from '../../components/layout'
 import PersonalInfo from '../../components/faculty/basic-info/personal-info'
 import Education from '../../components/faculty/basic-info/education'
 import EmploymentHistory from '../../components/faculty/basic-info/employment-history'
 import WorkExperience from '../../components/faculty/basic-info/work-experience'
 
-function BasicInfo(props) {
+function Dashboard() {
     return (
         <Layout>
             <nav>
@@ -19,16 +18,10 @@ function BasicInfo(props) {
 		<br />
 		<br />
             <div className="tab-content" id="nav-tabContent">
-            <div className="tab-pane fade show active" id="personal-info" role="tabpanel" aria-labelledby="personal-info-tab">
-                <PersonalInfo>{ props.personalInfo }</PersonalInfo>
-            </div>
+            <div className="tab-pane fade show active" id="personal-info" role="tabpanel" aria-labelledby="personal-info-tab"><PersonalInfo /></div>
             {/* <div className="tab-pane fade" id="emp-history" role="tabpanel" aria-labelledby="emp-history-tab"><EmploymentHistory /></div> */}
-            <div className="tab-pane fade" id="educ" role="tabpanel" aria-labelledby="educ-tab">
-                <Education>{ props.education }</Education>
-            </div>
-           <div className="tab-pane fade" id="work-exp" role="tabpanel" aria-labelledby="work-exp-tab">
-                <WorkExperience>{ props.workExperience }</WorkExperience>
-            </div>
+            <div className="tab-pane fade" id="educ" role="tabpanel" aria-labelledby="educ-tab"><Education /></div>
+            <div className="tab-pane fade" id="work-exp" role="tabpanel" aria-labelledby="work-exp-tab"><WorkExperience /></div>
             </div>
 	<style jsx>{`
 		a.nav-item:focus{
@@ -44,63 +37,5 @@ function BasicInfo(props) {
         </Layout>
     )
   }
-
-BasicInfo.getInitialProps = async () => {
-    let url = 'https://sp-api-test.alun.app/api/';
-    const res = await fetch(url + 'token',
-    {
-        body: JSON.stringify({"username": "username", "password": "password"}),
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        method: 'POST'
-    })
-    
-    const access = await res.json()
-    let token = access.result
-    url = 'https://sp-api-test.alun.app/api/faculty/basic-info/';
-    let header = {
-        headers: {
-            'Authorization': 'Bearer ' + token
-        }
-    }
-
-    const personal = await fetch(url + '9', header)
-    const personalInfo = await personal.json()
-
-    const employ = await fetch(url + '9/employment', header)
-    const employment = await employ.json()
-
-    const educ = await fetch(url + '9/education', header)
-    const education = await educ.json()
-
-    const work = await fetch(url + '9/work-exp', header)
-    const workExperience = await work.json()
-
-    workExperience.result.push(employment.result)
-
-    return { 
-        personalInfo: personalInfo.result,
-        // employment: employment.result,
-        education: education.result,
-        workExperience: workExperience.result
-    }
-}
-
-//   BasicInfo.getInitialProps = async () => {
-//       let url = 'https://sp-api-test.alun.app/api/faculty/9'
-//       let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNjA1MzM5MjI4LCJleHAiOjE2MDUzNDI4Mjh9.deoiQ1EyQW0LDkKAY_T-lgjiehjeZ2KnsEGlkD2oP4A'
-//       const response = await fetch(url, {
-//           headers: {
-//               'Authorization': 'Bearer ' + token
-//           }
-//       })
-//       const personalInfo = await response.json()
-
-//       return { 
-//           personalInfo: personalInfo.result
-//         }
-//   }
   
-
-  export default BasicInfo
+  export default Dashboard

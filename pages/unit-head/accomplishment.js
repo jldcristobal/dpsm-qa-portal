@@ -1,13 +1,13 @@
-import Layout from '../../components/layout'
-import Publication from '../../components/faculty/accomplishments/publication'
-import PublicServiceAccomplishment from '../../components/faculty/accomplishments/public-service-accomplishment'
-import LicensureExam from '../../components/faculty/accomplishments/licensure-exam'
-import TrainingSeminar from '../../components/faculty/accomplishments/training-seminar'
-import ResearchGrant from '../../components/faculty/accomplishments/research-grant'
+import LayoutUnitHead from '../../components/layout-unit-head'
+import Publication from '../../components/unit-head/accomplishments/publication'
+import PublicServiceAccomplishment from '../../components/unit-head/accomplishments/public-service-accomplishment'
+import LicensureExam from '../../components/unit-head/accomplishments/licensure-exam'
+import TrainingSeminar from '../../components/unit-head/accomplishments/training-seminar'
+import ResearchGrant from '../../components/unit-head/accomplishments/research-grant'
 
 function Dashboard() {
     return (
-        <Layout>
+        <LayoutUnitHead>
             <nav>
             <div className="nav nav-tabs nav-fill nav-justified" id="nav-tab" role="tablist">
                 {/* <a className="nav-item nav-link active" id="academic-accomplishment-tab" data-toggle="tab" href="#academic-accomplishment" role="tab" aria-controls="academic-accomplishment" aria-selected="true">Academic Accomplishments</a> */}
@@ -39,7 +39,7 @@ function Dashboard() {
 			background-color:#78b6c2;
 		}
 	`}</style>
-        </Layout>
+        </LayoutUnitHead>
     )
   }
   

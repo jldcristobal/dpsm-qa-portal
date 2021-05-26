@@ -1,15 +1,16 @@
-import Layout from '../../components/layout'
-import EvaluationSemester from '../../components/faculty/evaluation/evaluation-semester'
+import LayoutUnitHead from '../../components/layout-unit-head'
+import EvaluationSemester from '../../components/unit-head/evaluation/evaluation-semester'
 import Link from 'next/link'
 import NameDisplay from '../../components/name-display'
 
 function Evaluation() {
     return (
-        <Layout>
+        <LayoutUnitHead>
             <br />
-		<h2 align = "center"> Peer Evaluation </h2>
-		<NameDisplay />
-		<div className = "list-group">
+			<h2 align = "center"> Peer Evaluation </h2>
+			<NameDisplay />
+		<br />
+            <div className = "list-group">
 			<a className = "list-group-item list-group-item-action list-group-item-secondary" href = "#evaluation_ay20202021" data-toggle = "collapse" aria-controls = "evaluation_ay20202021">AY 2020-2021</a>
 				<div id = "evaluation_ay20202021" className = "jumbotron collapse">
 					<EvaluationSemester />
@@ -24,13 +25,13 @@ function Evaluation() {
                 		<div id = "evaluation_ay20182019" className = "jumbotron collapse">
 					<EvaluationSemester />
 				</div>
-            	</div>
+            </div>
 		<style jsx>{`
 			.list-group-item-info{
 				text-indent:5%;
 			}
 		`}</style>
-        </Layout>
+        </LayoutUnitHead>
     )
   }
   
