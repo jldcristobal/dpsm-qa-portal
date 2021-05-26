@@ -7,7 +7,7 @@ function Publication(){
 		<div>
 			<h2 align = "center"> Publications </h2>
 			<NameDisplay />
-		<div>
+			<div>
 	<table className = "table table-striped table-sm">
 		<tbody>
 			<tr>

@@ -23,9 +23,10 @@ class AccomplishmentDashboardGraph extends React.Component {
     }
   }
 
+
   render() {
-    return (
-      <div className="app">
+   return(
+     <div className="app">
 	<br />
         <div className="row">
           <div className="mixed-chart">
@@ -38,8 +39,9 @@ class AccomplishmentDashboardGraph extends React.Component {
           </div>
         </div>
       </div>
-    )
+   )
   }
+
 }
 
 export default AccomplishmentDashboardGraph

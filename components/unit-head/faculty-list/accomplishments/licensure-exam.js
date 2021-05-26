@@ -19,8 +19,8 @@ function LicensureExam() {
 			    <td>Mechanical Engineering</td>
                             <td>3</td>
                             <td>2020-11-11</td>
-			    <td></td>
-                            <td></td>
+			    <td>0000-0000</td>
+                            <td><a href = "#">Download proof</a></td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -30,11 +30,11 @@ function LicensureExam() {
 			    </td>
                         </tr>
                         <tr>
-			    <td></td>
+			    <td>Pharmacy</td>
                             <td>8</td>
                             <td>2020-1-14</td>
-			    <td></td>
-                            <td></td>
+			    <td>1111-1111</td>
+                            <td><a href = "#">Download proof</a></td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -44,16 +44,16 @@ function LicensureExam() {
 			    </td>
                         </tr>
                         <tr>
-			    <td></td>
+			    <td>Chemistry</td>
                             <td>1</td>
                             <td>2020-4-1</td>
-			    <td></td>
-                            <td></td>
+			    <td>2222-2222</td>
+                            <td><a href = "#">Download proof</a></td>
                             <td>Verified</td>
 			    <td>
 				<div className = "btn-group">
-					<a className="btn btn-info" data-toggle="modal" data-target="#approveLicensureExam">Approve</a>
-					<a className="btn btn-danger" data-toggle="modal" data-target="#rejectLicensureExam">Reject</a>
+					<a className="btn btn-info disabled" data-toggle="modal" data-target="#approveLicensureExam">Approve</a>
+					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#rejectLicensureExam">Reject</a>
 				</div>
 			    </td>
                         </tr>

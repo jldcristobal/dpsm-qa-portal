@@ -8,7 +8,7 @@ function ResearchGrant(){
 		<tbody>
 			<tr>
 				<th>Research Project</th>
-				<th>Reseacher/s</th>
+				<th>Researcher/s</th>
 				<th>Sponsor</th>
 				<th>Amount</th>
 				<th>Projected Duration</th>
@@ -38,15 +38,15 @@ function ResearchGrant(){
 			    	</td>
 			</tr>
 			<tr>
+				<td>Lightsail Prototype</td>
+				<td><a href = "#">Steve</a>, Bob, Greg</td>
+				<td>NASA</td>
+				<td>Php1,500,000,000</td>
+				<td>2019-11-20 to 2021-5-18</td>
+				<td>2019-12-25</td>
 				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>2017-05-26</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>Ongoing</td>
+				<td><a href ="#">Download proof</a></td>
 				<td>Pending Approval</td>
 				<td>
 					<div className = "btn-group">
@@ -56,20 +56,20 @@ function ResearchGrant(){
 			    	</td>
 			</tr>
 			<tr>
+				<td>Microplastic Filtration System</td>
+				<td><a href = "#">Steve</a>, Bob, Greg</td>
+				<td>EPA</td>
+				<td>Php70,000,000</td>
+				<td>2019-11-20 to 2021-5-18</td>
+				<td>2019-12-25</td>
 				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>2010-09-06</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>Ongoing</td>
+				<td><a href ="#">Download proof</a></td>
 				<td>Verified</td>
 				<td>
 					<div className = "btn-group">
-						<a className="btn btn-info" data-toggle="modal" data-target="#approveResearchGrant">Approve</a>
-						<a className="btn btn-danger" data-toggle="modal" data-target="#rejectResearchGrant">Reject</a>
+						<a className="btn btn-info disabled" data-toggle="modal" data-target="#approveResearchGrant">Approve</a>
+						<a className="btn btn-danger disabled" data-toggle="modal" data-target="#rejectResearchGrant">Reject</a>
 					</div>
 			    	</td>
 			</tr>

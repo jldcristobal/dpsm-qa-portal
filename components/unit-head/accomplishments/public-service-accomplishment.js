@@ -5,8 +5,8 @@ import NameDisplay from '../../../components/name-display'
 function PublicServiceAccomplishment(){
 	return(
 	<div>
-		<h2 align = "center"> Public Service Accomplishments </h2>
-		<NameDisplay />
+			<h2 align = "center"> Public Service Accomplishments </h2>
+			<NameDisplay />
 		<div>
 		<h5 align = "center">Within UP Manila </h5>
                 <table className = "table table-striped table-sm">
@@ -22,12 +22,12 @@ function PublicServiceAccomplishment(){
                             <th>Action</th>
                         </tr>
                         <tr>
-			    <td>Chairman</td>
-                            <td>DPSM Week Committee</td>
+			    <td></td>
+                            <td></td>
                             <td></td>
 			    <td>2020-02-29</td>
-			    <td>2020-03-14</td>
-                            <td><a href = "#">Download proof</a></td>
+			    <td></td>
+                            <td></td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -37,17 +37,17 @@ function PublicServiceAccomplishment(){
 			    </td>
                         </tr>
                         <tr>
-			    <td>Organizer</td>
-                            <td>DPSM Fundraiser</td>
-                            <td>Lead organizer of event</td>
+			    <td></td>
+                            <td></td>
+                            <td></td>
 			    <td>2020-03-20</td>
-			    <td>2020-03-21</td>
-                            <td><a href = "#">Download proof</a></td>
+			    <td></td>
+                            <td></td>
 			    <td>Verified</td>
                             <td>
 				<div className = "btn-group">
-					<a className="btn btn-info disabled" data-toggle="modal" data-target="#editPublicService">Edit</a>
-					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#deletePublicService">Delete</a>
+					<a className="btn btn-info" data-toggle="modal" data-target="#editPublicService">Edit</a>
+					<a className="btn btn-danger" data-toggle="modal" data-target="#deletePublicService">Delete</a>
 				</div>
 			    </td>
                         </tr>
@@ -75,7 +75,7 @@ function PublicServiceAccomplishment(){
                             <td></td>
 			    <td>2020-02-29</td>
                             <td></td>
-			    <td><a href = "#">Download proof</a></td>
+			    <td></td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -90,12 +90,12 @@ function PublicServiceAccomplishment(){
                             <td></td>
 			    <td>2020-03-20</td>
                             <td></td>
-			    <td><a href = "#">Download proof</a></td>
+			    <td></td>
 			    <td>Verified</td>
                             <td>
 				<div className = "btn-group">
-					<a className="btn btn-info disabled" data-toggle="modal" data-target="#editPublicService">Edit</a>
-					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#deletePublicService">Delete</a>
+					<a className="btn btn-info" data-toggle="modal" data-target="#editPublicService">Edit</a>
+					<a className="btn btn-danger" data-toggle="modal" data-target="#deletePublicService">Delete</a>
 				</div>
 			    </td>
                         </tr>
@@ -121,7 +121,7 @@ function PublicServiceAccomplishment(){
                             <td></td>
 			    <td>2020-02-29</td>
                             <td></td>
-			    <td><a href = "#">Download proof</a></td>
+			    <td></td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -136,12 +136,12 @@ function PublicServiceAccomplishment(){
                             <td></td>
 			    <td>2020-03-20</td>
                             <td></td>
-			    <td><a href = "#">Download proof</a></td>
+			    <td></td>
 			    <td>Verified</td>
                             <td>
 				<div className = "btn-group">
-					<a className="btn btn-info disabled" data-toggle="modal" data-target="#editPublicService">Edit</a>
-					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#deletePublicService">Delete</a>
+					<a className="btn btn-info" data-toggle="modal" data-target="#editPublicService">Edit</a>
+					<a className="btn btn-danger" data-toggle="modal" data-target="#deletePublicService">Delete</a>
 				</div>
 			    </td>
                         </tr>
@@ -167,7 +167,7 @@ function PublicServiceAccomplishment(){
                             <td></td>
 			    <td>2020-02-29</td>
                             <td></td>
-			    <td><a href = "#">Download proof</a></td>
+			    <td></td>
 			    <td>Pending Approval</td>
                             <td>
 				<div className = "btn-group">
@@ -182,12 +182,12 @@ function PublicServiceAccomplishment(){
                             <td></td>
 			    <td>2020-03-20</td>
                             <td></td>
-			    <td><a href = "#">Download proof</a></td>
+			    <td></td>
 			    <td>Verified</td>
                             <td>
 				<div className = "btn-group">
-					<a className="btn btn-info disabled" data-toggle="modal" data-target="#editPublicService">Edit</a>
-					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#deletePublicService">Delete</a>
+					<a className="btn btn-info" data-toggle="modal" data-target="#editPublicService">Edit</a>
+					<a className="btn btn-danger" data-toggle="modal" data-target="#deletePublicService">Delete</a>
 				</div>
 			    </td>
                         </tr>

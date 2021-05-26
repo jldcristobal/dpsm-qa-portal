@@ -21,8 +21,8 @@ function Publication(){
 				<td><a href = "#">Steve</a>, Bob, Greg</td>
 				<td>2020-01-26</td>
 				<td>http://clubpenguin.com</td>
-				<td></td>
-				<td></td>
+				<td>Blum, S., Parr, B., Kinnear, G. (2020). Principles of Programming Language. <i>Scientific American</i>, 108, 204-210</td>
+				<td><a href ="#">Download proof</a></td>
 				<td>Pending Approval</td>
 				<td>
 				<div className = "btn-group">
@@ -33,12 +33,12 @@ function Publication(){
 			</tr>
 			<tr>
 				<td>Advanced Computer Systems</td>
-				<td></td>
+				<td><a href = "#">Steve</a>, Bob, Greg</td>
 				<td>2017-05-26</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>Verified</td>
+				<td>http://clubpenguin.com</td>
+				<td>Blum, S., Parr, B., Kinnear, G. (2017). Advanced Computer Systems. <i>Scientific American</i>, 101, 97-105</td>
+				<td><a href ="#">Download proof</a></td>
+				<td>Pending Approval</td>
 				<div className = "btn-group">
 					<a className="btn btn-info" data-toggle="modal" data-target="#approvePublication">Approve</a>
 					<a className="btn btn-danger" data-toggle="modal" data-target="#rejectPublication">Reject</a>
@@ -46,15 +46,15 @@ function Publication(){
 			</tr>
 			<tr>
 				<td>Algorithms and Advanced Data Structures I</td>
-				<td></td>
+				<td><a href = "#">Steve</a>, Bob, Greg</td>
 				<td>2010-09-06</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>http://clubpenguin.com</td>
+				<td>Blum, S., Parr, B., Kinnear, G. (2010). Algorithms and Advanced Data Structures I. <i>Scientific American</i>, 88, 35-50</td>
+				<td><a href ="#">Download proof</a></td>
+				<td>Verified</td>
 				<div className = "btn-group">
-					<a className="btn btn-info" data-toggle="modal" data-target="#approvePublication">Approve</a>
-					<a className="btn btn-danger" data-toggle="modal" data-target="#rejectPublication">Reject</a>
+					<a className="btn btn-info disabled" data-toggle="modal" data-target="#approvePublication">Approve</a>
+					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#rejectPublication">Reject</a>
 				</div>
 			</tr>
 		</tbody>

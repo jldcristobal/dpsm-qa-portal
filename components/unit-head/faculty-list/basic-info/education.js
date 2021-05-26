@@ -56,8 +56,8 @@ function Education() {
 			    <td>Verified</td>
                             <td>
 				<div className = "btn-group">
-					<a className="btn btn-info" data-toggle="modal" data-target="#approveEducation">Approve</a>
-					<a className="btn btn-danger" data-toggle="modal" data-target="#rejectEducation">Reject</a>
+					<a className="btn btn-info disabled" data-toggle="modal" data-target="#approveEducation">Approve</a>
+					<a className="btn btn-danger disabled" data-toggle="modal" data-target="#rejectEducation">Reject</a>
 				</div>
 			    </td>
                         </tr>

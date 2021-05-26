@@ -3,7 +3,7 @@ import Link from 'next/link'
 function WorkExperience(){
 	return(
 	<div>
-			<h5 align = "center"> Within UP Manila </h5>
+			<h5 align = "center"> Outside UP Manila </h5>
 			<table className = "table table-striped table-sm">
 			<tbody>
 				<tr>
