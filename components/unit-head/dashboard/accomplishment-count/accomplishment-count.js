@@ -50,7 +50,7 @@ function AccomplishmentCount(props){
 		  if(accompList[key].faculty_public_services.length > 0) {
 			accompList[key].faculty_public_services.forEach(async (i) => {
 				await tableData.push({
-					col1: <a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>{accompList[key].lastName + ', ' + accompList[key].firstName}</a>,
+					col1: {/*<a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>*/} {accompList[key].lastName + ', ' + accompList[key].firstName} {/*</a>*/},
 					col2: i.position + ' - ' + i.organization,
 					col3: 'Public Service',
 					col4: i.startDate,
@@ -62,7 +62,7 @@ function AccomplishmentCount(props){
 		  if(accompList[key].faculty_publishers.length > 0) {
 			accompList[key].faculty_publishers.forEach(async (i) => {
 				await tableData.push({
-					col1: <a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>{accompList[key].lastName + ', ' + accompList[key].firstName}</a>,
+					col1: {/*<a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>*/} {accompList[key].lastName + ', ' + accompList[key].firstName} {/*</a>*/},
 					col2: i.faculty_publication.title,
 					col3: 'Publication',
 					col4: i.faculty_publication.publicationDate,
@@ -74,7 +74,7 @@ function AccomplishmentCount(props){
 		  if(accompList[key].faculty_training_seminars.length > 0) {
 			accompList[key].faculty_training_seminars.forEach(async (i) => {
 				await tableData.push({
-					col1: <a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>{accompList[key].lastName + ', ' + accompList[key].firstName}</a>,
+					col1: {/*<a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>*/} {accompList[key].lastName + ', ' + accompList[key].firstName} {/*</a>*/},
 					col2: i.role + ' - ' + i.title,
 					col3: 'Training/Seminar',
 					col4: i.dateFrom,
@@ -86,7 +86,7 @@ function AccomplishmentCount(props){
 		  if(accompList[key].faculty_researchers.length > 0) {
 			accompList[key].faculty_researchers.forEach(async (i) => {
 				await tableData.push({
-					col1: <a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>{accompList[key].lastName + ', ' + accompList[key].firstName}</a>,
+					col1: {/*<a href = {`${'/faculty/view/' + encodeURIComponent(accompList[key].facultyId)}`}>*/} {accompList[key].lastName + ', ' + accompList[key].firstName} {/*</a>*/},
 					col2: i.faculty_research_grant.researchName,
 					col3: 'Research Grant',
 					col4: i.faculty_research_grant.actualStart,
