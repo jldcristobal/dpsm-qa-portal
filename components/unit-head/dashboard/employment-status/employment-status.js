@@ -40,7 +40,7 @@ function EmploymentStatus(props){
 			}
 
 			await tableData.push({
-				col1: <a href = {`${'/faculty/view/' + encodeURIComponent(e.facultyId)}`}>{e.lastName + ', ' + e.firstName}</a>,
+				col1: {/*<a href = {`${'/faculty/view/' + encodeURIComponent(e.facultyId)}`}>*/} {e.lastName + ', ' + e.firstName} {/*</a>*/},
 				col2: e.faculty_employment_infos[0].faculty_employment_position.position,
 				col3: e.faculty_employment_infos[0].status,
 				col4: e.faculty_employment_infos[0].category
