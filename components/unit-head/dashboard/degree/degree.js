@@ -62,7 +62,7 @@ function DegreeCount(props) {
 				}
 	
 				await tableData.push({
-					col1: <a href = {`${'/faculty/view/' + encodeURIComponent(e.facultyId)}`}>{e.lastName + ', ' + e.firstName}</a>,
+					col1: {/*<a href = {`${'/faculty/view/' + encodeURIComponent(e.facultyId)}`}>*/} {e.lastName + ', ' + e.firstName} {/*</a>*/},
 					col2: i.degreeCert,
 					  col3: i.degreeType,
 					  col4: i.endDate
