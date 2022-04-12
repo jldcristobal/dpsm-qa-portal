@@ -205,7 +205,7 @@ function PersonalInfo(props) {
                     <div className = "form-row">
                         <div className = "form-group col-md-3">
                             <label className = "control-label" htmlFor = "ContactNumber"> Contact Number (Landline) </label>
-                            <Field className = "form-control" type = "tel" name = "landline" pattern = "[0-9]{10}" defaultValue = { FacultyDetails.landline } disabled={!props.facultyFlag && !props.clerkFlag} />
+                            <Field className = "form-control" type = "tel" name = "landline" pattern = "[0-9]{8}" defaultValue = { FacultyDetails.landline } disabled={!props.facultyFlag && !props.clerkFlag} />
                         </div>
                         <div className = "form-group col-md-3 required">
                             <label className = "control-label" htmlFor = "ContactNumber"> Contact Number (Mobile) </label>
