@@ -20,7 +20,7 @@ function BasicInfo(props) {
             <div className="nav nav-tabs nav-justified flex-column flex-md-row" id="nav-tab-main" role="tablist">
 				<a className="nav-item nav-link active" id="basic-info-tab" data-toggle="tab" href="#basic-info" role="tab" aria-controls="basic-info" aria-selected="true">Basic Information</a>
 				<a className="nav-item nav-link" id="accomplishments-tab" data-toggle="tab" href="#accomplishments" role="tab" aria-controls="accomplishments" aria-selected="false">Accomplishments</a>
-				<a className="nav-item nav-link" id="evaluation-tab" data-toggle="tab" href="#evaluation" role="tab" aria-controls="evaluation" aria-selected="false">Peer Evaluation</a>
+{/*<a className="nav-item nav-link" id="evaluation-tab" data-toggle="tab" href="#evaluation" role="tab" aria-controls="evaluation" aria-selected="false">Peer Evaluation</a>*/}
 				<a className="nav-item nav-link" id="faculty-load-tab" data-toggle="tab" href="#faculty-load" role="tab" aria-controls="faculty-load" aria-selected="false">Faculty Load</a>
             </div>
             <div className="tab-content" id="nav-tabContent-main">
