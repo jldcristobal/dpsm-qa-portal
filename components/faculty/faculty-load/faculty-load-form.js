@@ -63,15 +63,17 @@ class FacultyLoadForm extends React.Component{
                         <hr />
                         <h5>Add Faculty Load</h5>
                         <br/>
+                        <h6>Required</h6>
+                        <br />
                         <div className = "form-row">
                             <Field className = "form-control" type = "hidden" name = "facultyId" value = {this.props.facultyId} />
                             <div className = "form-group col-md-2">
                                 <label htmlFor = "Subject"> Subject </label>
-                                <Field className = "form-control" type = "text" name = "subject" placeholder = "Input subject" />
+                                <Field className = "form-control" type = "text" name = "subject" placeholder = "Input subject" required />
                             </div>
                             <div className = "form-group col-md-2">
                                 <label htmlFor = "Section"> Section </label>
-                                <Field className = "form-control" type = "text" name = "section" placeholder = "Input section" />
+                                <Field className = "form-control" type = "text" name = "section" placeholder = "Input section" required />
                             </div>
                             <div className = "form-group col-md-3">
                                 <label htmlFor = "Semester"> Semester </label>
@@ -99,6 +101,19 @@ class FacultyLoadForm extends React.Component{
                         </button>
                     </Form>
                 )}
+                 <style jsx>{`
+            .form-group.required .control-label:after{
+                content: "*";
+                color: #f00;
+            }
+            h6:before{
+                content: "* ";
+                color: #f00;
+            }
+            #alert {
+                visibility: hidden;
+            }
+        `}</style>
             </Formik>
         )
     }
