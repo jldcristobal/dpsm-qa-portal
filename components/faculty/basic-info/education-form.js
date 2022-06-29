@@ -7,6 +7,9 @@ import addEducation from '../../../services/faculty/basic-info/addEducation'
 class EducationForm extends React.Component{
     constructor(props){
         super(props)
+	this.state = {
+		startdate: ""
+	}
     }
 
     render(){
@@ -89,11 +92,11 @@ class EducationForm extends React.Component{
                          <div className = "form-row">
                                 <div className = "form-group col-md-2">
                                     <label htmlFor = "StartDateEducationalHistory[]" className = "required-label"> Start Date </label>
-                                    <Field type = "date" className = "form-control" name = "startDate" id = "startDate" required />
+                                    <Field type = "date" className = "form-control" name = "startDate" onChange={e => this.setState({ startdate: e.target.value })} id = "startDate" required />
                                 </div>
                                 <div className = "form-group col-md-2">
                                     <label htmlFor = "EndDateEducationalHistory[]"> End Date </label>
-                                    <Field type = "date" className = "form-control" name = "endDate" id = "endDate" />
+                                    <Field type = "date" className = "form-control" name = "endDate" min={this.state.startdate} id = "endDate" />
                                 </div>
                                 <div className = "form-group col-md-2">
                                     <label htmlFor = "ProofEducationalHistory[]"> Proof </label>
