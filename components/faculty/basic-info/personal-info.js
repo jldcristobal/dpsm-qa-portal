@@ -204,7 +204,7 @@ function PersonalInfo(props) { console.log(props.hasDisabledFields);
                     <div className = "form-row">
                         <div className = "form-group col-md-3">
                             <label className = "control-label" htmlFor = "ContactNumber"> Contact Number (Landline) </label>
-                            <Field className = "form-control" type = "tel" name = "landline" pattern = "[0-9]{10}" defaultValue = { FacultyDetails.landline } disabled={!props.editable} />
+                            <Field className = "form-control" type = "tel" name = "landline" pattern = "[0-9]{9,10}" defaultValue = { FacultyDetails.landline } disabled={!props.editable} />
                         </div>
                         <div className = "form-group col-md-3 required">
                             <label className = "control-label" htmlFor = "ContactNumber"> Contact Number (Mobile) </label>
