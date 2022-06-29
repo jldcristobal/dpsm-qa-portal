@@ -7,6 +7,9 @@ import addEmployment from '../../../services/faculty/basic-info/addEmployment'
 class EmploymentForm extends React.Component{
 	constructor(props){
 		super(props)
+		this.state = {
+			startdate: ""
+		}
 	}
 
 	render(){
@@ -80,11 +83,11 @@ class EmploymentForm extends React.Component{
                             </div>
                             <div className = "form-group col-md-3" className = "required-label">
                                 <label htmlFor = "StartDateEmployment[]"> Start Date *</label>
-                                <Field type = "date" className = "form-control" name = "startDate" required />
+                                <Field type = "date" className = "form-control" onChange={e => this.setState({ startdate: e.target.value })} name = "startDate" required />
                             </div>
                             <div className = "form-group col-md-3">
                                 <label htmlFor = "EndDateEmployment[]"> End Date </label>
-                                <Field type = "date" className = "form-control" name = "endDate" />
+                                <Field type = "date" className = "form-control" min={this.state.startdate} name = "endDate" />
                             </div>
                         </div>
                         <br />
