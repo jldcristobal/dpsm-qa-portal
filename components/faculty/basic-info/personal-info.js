@@ -244,7 +244,7 @@ function PersonalInfo(props) { console.log(props.hasDisabledFields);
                             <div className = "form-row">
                                 <div className = "form-group col-md-3 required">
                                     <label className = "control-label" htmlFor = "EmailAddressAlt"> UP E-mail </label>
-                                    <Field className = "form-control" type = "email" name = "upemail" defaultValue = { FacultyDetails.email } required />
+                                    <Field className = "form-control" type = "email" name = "upemail" pattern ="\w*(@up.edu.ph)" defaultValue = { FacultyDetails.email } required />
                                 </div>
                                 <div className = "form-group col-md-3 required">
                                     <label className = "control-label" htmlFor ="Unit"> Unit </label>
