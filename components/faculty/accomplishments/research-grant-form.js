@@ -9,6 +9,10 @@ class ResearchGrantForm extends React.Component{
 
 	constructor(props){
 		super(props)
+		this.state = {
+			startdateProjected: ""
+			startdateActual: ""
+		}
 	}
 	
 	render(){
@@ -90,19 +94,19 @@ class ResearchGrantForm extends React.Component{
 						<div className = "form-row">
 							<div className = "form-group col-md-2">
 								<label htmlFor = "ResearchProjectedStartDate[]" className = "required-label"> Start Date (Projected) </label>
-								<Field type = "date" className = "form-control" name = "projectedStart" required />
+								<Field type = "date" className = "form-control" onChange={e => this.setState({ startdateProjected: e.target.value })} name = "projectedStart" required />
 							</div>
 							<div className = "form-group col-md-2">
 								<label htmlFor = "ResearchProjectedEndDate[]" className = "required-label"> End Date (Projected) </label>
-								<Field type = "date" className = "form-control" name = "projectedEnd" required />
+								<Field type = "date" className = "form-control" min={this.state.startdateProjected} name = "projectedEnd" required />
 							</div>
 							<div className = "form-group col-md-2">
 								<label htmlFor = "ResearchStartDate[]" className = "required-label"> Start Date (Actual) </label>
-								<Field type = "date" className = "form-control" name = "actualStart" required />
+								<Field type = "date" className = "form-control" onChange={e => this.setState({ startdateActual: e.target.value })} name = "actualStart" required />
 							</div>
 							<div className = "form-group col-md-2">
 								<label htmlFor = "ResearchEndDate[]"> End Date (Actual) </label>
-								<Field type = "date" className = "form-control" name = "actualEnd" />
+								<Field type = "date" className = "form-control" min={this.state.startdateActual} name = "actualEnd" />
 							</div>
 							<div className = "form-group col-md-4"> 
 								<label htmlFor = "ResearchProgress[]" className = "required-label"> Research Progress </label>
