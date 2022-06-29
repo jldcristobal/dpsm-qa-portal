@@ -7,6 +7,9 @@ import addWorkExp from '../../../services/faculty/basic-info/addWorkExp'
 class WorkExpForm extends React.Component{
 	constructor(props){
 		super(props)
+		this.state = {
+			startdate: ""
+		}
 	}
 
 	render(){
@@ -62,11 +65,11 @@ class WorkExpForm extends React.Component{
 						<div className = "form-row">
 							<div className = "form-group col-md-3">
 								<label htmlFor = "StartDateWorkExperience[]" className = "required-label"> Start Date </label>
-								<Field type = "date" className = "form-control" name = "startDate" required />
+								<Field type = "date" className = "form-control" onChange={e => this.setState({ startdate: e.target.value })} name = "startDate" required />
 							</div>
 							<div className = "form-group col-md-3">
 								<label htmlFor = "EndDateWorkExperience[]"> End Date </label>
-								<Field type = "date" className = "form-control" name = "endDate" />
+								<Field type = "date" className = "form-control" min={this.state.startdate} name = "endDate" />
 							</div>
 						</div>
 						<br />
