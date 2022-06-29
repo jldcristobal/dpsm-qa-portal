@@ -7,6 +7,9 @@ import addTraining from '../../../services/faculty/accomplishments/addTraining'
 class TrainingSeminarForm extends React.Component{
 	constructor(props){
 		super(props)
+		this.state = {
+			startdate: ""
+		}
 	}
 	
 	render(){
@@ -64,11 +67,11 @@ class TrainingSeminarForm extends React.Component{
                             </div>
                             <div className = "form-group col-md-2">
                                 <label htmlFor = "TrainingSeminarStartDate[]" className = "required-label"> Start Date </label>
-                                <Field type = "date" className = "form-control" name = "dateFrom" id = "dateFrom" required />
+                                <Field type = "date" className = "form-control" onChange={e => this.setState({ startdate: e.target.value })}  name = "dateFrom" id = "dateFrom" required />
                             </div>
                             <div className = "form-group col-md-2">
                                 <label htmlFor = "TrainingSeminarEndDate[]"> End Date </label>
-                                <Field type = "date" className = "form-control" name = "dateTo" id = "dateTo" />
+                                <Field type = "date" className = "form-control" min={this.state.startdate} name = "dateTo" id = "dateTo" />
                             </div>
                             <div className = "form-group col-md-8">
                                 <label htmlFor = "TrainingSeminarRemarks[]"> Remarks </label>
