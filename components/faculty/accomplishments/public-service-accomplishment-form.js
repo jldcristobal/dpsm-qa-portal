@@ -7,6 +7,9 @@ import addPublicService from '../../../services/faculty/accomplishments/addPubli
 class PublicServiceAccomplishmentForm extends React.Component{
     constructor(props){
         super(props)
+	this.state = {
+		startdate: ""
+	}
     }
     
 	render(){
@@ -61,11 +64,11 @@ class PublicServiceAccomplishmentForm extends React.Component{
                         </div>
                         <div className = "form-group col-md-2">
                             <label htmlFor = "PublicServiceAccomplishmentStartDate[]" className = "required-label"> Start Date </label>
-                            <Field type = "date" className = "form-control" name = "startDate" id = "startDate" required />
+                            <Field type = "date" className = "form-control" onChange={e => this.setState({ startdate: e.target.value })} name = "startDate" id = "startDate" required />
                         </div>
                         <div className = "form-group col-md-2">
                             <label htmlFor = "PublicServiceAccomplishmentEndDate[]"> End Date </label>
-                            <Field type = "date" className = "form-control" name = "endDate" id = "endDate" />
+                            <Field type = "date" className = "form-control" min={this.state.startdate} name = "endDate" id = "endDate" />
                         </div>
                         <div className = "form-group col-md-2">
                             <label htmlFor = "PublicServiceAccomplishmentProof[]"> Proof </label>
