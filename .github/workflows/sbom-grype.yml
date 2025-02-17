@@ -1,0 +1,51 @@
+name: SBOM & Security Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sbom-security-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: |
+          npm install # Or yarn install if using yarn
+
+      - name: Install Syft & Grype
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+          curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Generate SBOM (CycloneDX)
+        run: |
+          syft . -o cyclonedx-json > sbom.json
+
+      - name: Run Vulnerability Scan with Grype
+        run: |
+          grype sbom:sbom.json -o table > grype-report.txt || true
+
+      - name: Upload SBOM & Scan Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan-results
+          path: |
+            sbom.json
+            grype-report.txt
+
+      - name: Fail on Critical Vulnerabilities
+        run: |
+          if grep -q "Critical" grype-report.txt; then
+            echo "❌ Found critical vulnerabilities!"
+            exit 1
+          else
+            echo "✅ No critical vulnerabilities found."
+          fi
